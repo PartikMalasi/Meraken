@@ -1,12 +1,23 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom"; // Import useParams
+import products from "../data/products"; // Replace with your actual data source
 
 const ProductDetails = () => {
-  const { state } = useLocation();
-  const product = state?.product;
+  const { id } = useParams(); // Get the product ID from the URL
+  const product = products.find((item) => item.id === parseInt(id)); // Find the product by ID
 
   if (!product) {
-    return <div>Product not found!</div>;
+    return (
+      <div className="p-4 bg-white shadow-md rounded-lg">
+        <p className="text-red-500">Product not found!</p>
+        <Link
+          to="/"
+          className="mt-4 bg-blue-500 text-white p-2 rounded-md inline-block"
+        >
+          Back to Products
+        </Link>
+      </div>
+    );
   }
 
   return (

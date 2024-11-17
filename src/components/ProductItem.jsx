@@ -6,7 +6,7 @@ const ProductItem = ({ product }) => {
   const { addToCart } = useCart(); // Access addToCart function from CartContext
 
   return (
-    <div className="border rounded-lg p-4 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg duration-300 bg-white">
+    <div className="flex justify-end flex-col border rounded-lg p-4 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg duration-300 bg-white">
       <img
         src={product.image}
         alt={product.name}
