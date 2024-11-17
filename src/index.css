@@ -8,4 +8,6 @@
     src: url("./assets/museo/Museo700-Regular.otf") format("opentype");
     
   }
+}body {
+  font-family: 'Inter', sans-serif;
 }
