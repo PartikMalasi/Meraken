@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 99.99,
+    "image": "images/headphones.jpg",
+    "description": "High-quality wireless headphones with noise cancellation."
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 199.99,
+    "image": "images/smartwatch.jpg",
+    "description": "Stay connected on the go with this stylish smartwatch."
+  }
+]
