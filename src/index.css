@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Museo";
+    src: url("./assets/museo/Museo700-Regular.otf") format("opentype");
+    
+  }
+}
