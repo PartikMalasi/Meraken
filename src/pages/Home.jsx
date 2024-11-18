@@ -66,9 +66,9 @@ const Home = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 min-h-screen bg-gray-50 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-5 min-h-screen bg-gray-50 w-full">
       {/* Sidebar */}
-      <div className="col-span-1 w-1/5 fixed top-[90px] bg-white p-4 shadow-lg h-[calc(100vh-64px)] overflow-y-auto flex flex-col gap-6">
+      <div className="md:col-span-1 md:w-full md:sticky top-[90px] bg-white p-4 shadow-lg h-auto overflow-y-auto flex flex-col gap-6">
         <h1 className="text-3xl font-bold mt-4 text-gray-800">
           Product Catalog
         </h1>
@@ -77,7 +77,7 @@ const Home = () => {
           categories={["All", ...new Set(products.map((p) => p.category))]}
           onFilter={handleFilter}
         />
-        <div className="flex items-center gap-4 mt-4">
+        <div className="flex flex-wrap items-center gap-4 mt-4">
           <label className="font-medium">Sort by Price:</label>
           <select
             value={sortOrder}
@@ -110,16 +110,19 @@ const Home = () => {
           )}
         </div>
       </div>
+
       {/* Products List */}
-      {loading ? (
-        <div className="ml-[10rem] fixed h-full w-full flex items-center justify-center z-50">
+      <div
+        className={`${
+          loading ? "flex justify-center items-center" : " "
+        } col-span-4 md:col-span-4 p-4 overflow-y-auto w-full`}
+      >
+        {loading ? (
           <Loader />
-        </div>
-      ) : (
-        <div className="ml-[20rem] col-span-3 p-4 overflow-y-auto w-full">
+        ) : (
           <ProductList products={filteredProducts} addToCart={addToCart} />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

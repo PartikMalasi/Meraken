@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-
+import { toast } from "react-toastify";
 // Create Cart Context
 const CartContext = createContext();
 
@@ -21,11 +21,31 @@ export const CartProvider = ({ children }) => {
       }
       return updatedCart;
     });
+    toast.success(`${product.name} added to cart!`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      icon: false,
+    });
   };
 
   // Remove item from cart
   const removeFromCart = (productId) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+    toast.success("Item removed from cart!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      icon: false,
+    });
   };
 
   // Update quantity of an item

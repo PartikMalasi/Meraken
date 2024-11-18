@@ -1,29 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext"; // Import useCart
+import { useCart } from "../context/CartContext";
 
 const ProductItem = ({ product }) => {
-  const { addToCart } = useCart(); // Access addToCart function from CartContext
+  const { addToCart } = useCart();
 
   return (
-    <div className="flex justify-end flex-col border rounded-lg p-4 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg duration-300 bg-white">
+    <div className="flex flex-col border rounded-lg p-4 shadow-md transition-transform transform hover:scale-105 hover:shadow-lg duration-300 bg-white">
+      {/* Product Image */}
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-32 object-cover mb-4 rounded-md"
+        className="w-full h-40 object-cover mb-4 rounded-md"
       />
-      <h2 className="text-lg font-bold text-gray-800 mb-2">{product.name}</h2>
-      <p className="text-gray-600 font-medium mb-4">${product.price}</p>
+
+      {/* Product Info */}
+      <h2 className="text-xl font-semibold text-gray-800 mb-2">
+        {product.name}
+      </h2>
+      <p className="text-lg font-medium text-gray-600 mb-4">
+        ${product.price.toFixed(2)}
+      </p>
+
+      {/* Action Buttons */}
       <div className="flex gap-2">
         <Link
           to={`/product/${product.id}`}
-          className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300 text-center"
+          className="flex-1 bg-blue-500 text-white py-1.5 px-3 rounded-md text-sm hover:bg-blue-600 transition-all text-center "
         >
           View Details
         </Link>
         <button
-          onClick={() => addToCart(product)} // Add to cart
-          className="inline-block bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors duration-300 text-center"
+          onClick={() => addToCart(product)}
+          className="flex-1 bg-green-500 text-white py-1.5 px-3 rounded-md text-sm hover:bg-green-600 transition-all text-center"
         >
           Add to Cart
         </button>
