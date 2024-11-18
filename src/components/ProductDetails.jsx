@@ -1,10 +1,11 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom"; // Import useParams
-import products from "../data/products"; // Replace with your actual data source
+import { useParams, Link } from "react-router-dom";
+import { useProduct } from "../context/ProductContext";
 
 const ProductDetails = () => {
-  const { id } = useParams(); // Get the product ID from the URL
-  const product = products.find((item) => item.id === parseInt(id)); // Find the product by ID
+  const { id } = useParams();
+  const { products } = useProduct();
+  const product = products.find((item) => item.id === parseInt(id));
 
   if (!product) {
     return (
