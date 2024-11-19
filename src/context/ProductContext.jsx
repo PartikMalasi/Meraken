@@ -10,7 +10,7 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https://run.mocky.io/v3/8ec11ff3-d143-45ec-aa70-4a1c7f5e91a8"
+          "https://run.mocky.io/v3/388f58a5-ff72-44cf-b029-6921144af136"
         ); // Replace with your API URL
         if (!response.ok) throw new Error("Failed to fetch products");
         const data = await response.json();
