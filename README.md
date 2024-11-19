@@ -12,12 +12,17 @@ A dynamic React.js web application that provides an intuitive and responsive pro
 - **💳 Price Range Slider**: Set budget-based product filters
 - **📱 Responsive Design**: Seamless experience on mobile and desktop
 
-## 🖥️ Screenshots
+## 📸 Application Screenshots
 
-![Desktop View](/images/Home.png)
-![Product Details](/images/Product_Details.png)
-![Cart](/images/Cart.png)
-![Mobile View](images/Mobile.png)
+<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+  <img src="images/Home.png" alt="Desktop Home View" width="45%" style="object-fit: cover;">
+  <img src="images/Product_Details.png" alt="Product Details" width="45%" style="object-fit: cover;">
+</div>
+
+<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+  <img src="images/Cart.png" alt="Cart View" width="45%" style="object-fit: cover;">
+  <img src="images/Mobile.png" alt="Mobile View" width="45%" style="object-fit: cover;">
+</div>
 
 ## 🛠️ Tech Stack
 
