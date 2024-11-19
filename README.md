@@ -15,7 +15,9 @@ A dynamic React.js web application that provides an intuitive and responsive pro
 ## 🖥️ Screenshots
 
 ![Desktop View](/images/Home.png)
-![Mobile View](images/MobileView.png)
+![Product Details](/images/Product_Details.png)
+![Cart](/images/Cart.png)
+![Mobile View](images/Mobile.png)
 
 ## 🛠️ Tech Stack
 
