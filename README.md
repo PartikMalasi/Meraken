@@ -14,14 +14,10 @@ A dynamic React.js web application that provides an intuitive and responsive pro
 
 ## 📸 Application Screenshots
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-  <img src="images/Home.png" alt="Desktop Home View" width="45%" style="object-fit: cover;">
-  <img src="images/Product_Details.png" alt="Product Details" width="45%" style="object-fit: cover;">
-</div>
 
-<div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-  <img src="images/Cart.png" alt="Cart View" width="45%" style="object-fit: cover;">
-</div>
+![Desktop View](/images/Home.png)
+![Product Details](/images/Product_Details.png)
+![Cart](/images/Cart.png)
 
 ## 🛠️ Tech Stack
 
